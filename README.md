@@ -4,13 +4,19 @@ This Node.js application is a lightweight API proxy server built using Express.j
 
 Features
 Rate Limiting: Limits the number of requests per IP to a maximum of 5 requests per minute. This prevents abuse and ensures fair usage.
+
 Caching: Caches successful responses from the external API for 5 minutes, reducing unnecessary API calls and improving performance.
+
 Error Handling: Gracefully handles errors from external APIs and provides meaningful responses to the client.
+
 Logging: Logs each incoming request with essential details such as the timestamp, IP address, and rate limit status, helping in debugging and tracking.
+
 Authentication: Implements token-based authentication to secure the proxy endpoint, ensuring that only authorized users can access it.
+
 Prerequisites
 Node.js (v14.x or higher)
 npm (v6.x or higher)
+
 Installation
 Clone the repository to your local machine:
 
@@ -46,6 +52,8 @@ Example cURL request:
 bash
 Copy code
 curl -H "Authorization: Bearer <AUTH_TOKEN>" http://localhost:3000/api/resource
+
+
 Rate Limiting
 The server uses rate limiting to restrict requests to 5 per minute per IP. If this limit is exceeded, the server will return a 429 Too Many Requests error.
 
